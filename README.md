@@ -1,7 +1,8 @@
 
 # Rapport
 
-
+Lagt till en ny activity vilket skapade en ny klass och en ny layout xml fil.
+Skapat en knapp som ska lkopplas till att starta en activity.
 
 ## Följande grundsyn gäller dugga-svar:
 
