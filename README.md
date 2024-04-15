@@ -32,6 +32,8 @@ function errorCallback(error) {
 
 Bilder läggs i samma mapp som markdown-filen.
 
+<img src="screen1.png" alt="Screen1" style="width:300px;height:600px;"> <img src="screen2.png" alt="Screen2" style="width:300px;height:600px;">
+
 ![](android.png)
 
 Läs gärna:
