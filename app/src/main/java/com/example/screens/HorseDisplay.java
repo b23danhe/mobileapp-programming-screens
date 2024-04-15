@@ -17,7 +17,7 @@ public class HorseDisplay extends AppCompatActivity {
         if (extras != null) {
             String name = extras.getString("name");
             int number = extras.getInt("number");
-            // Do something with the name and number
+
             TextView horseName=findViewById(R.id.horseName);
             horseName.setText(name);
 

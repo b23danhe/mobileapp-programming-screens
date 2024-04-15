@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Screens</string>
-    <string name="textview_text">Detta är en rubrik!</string>
+    <string name="textview_text">Secret Horse!</string>
     <string name="button_name">Show Horse</string>
 </resources>
