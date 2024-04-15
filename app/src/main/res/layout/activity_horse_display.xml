@@ -8,4 +8,13 @@
     tools:context=".HorseDisplay"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horseName" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horseNumber" />
 </LinearLayout>
