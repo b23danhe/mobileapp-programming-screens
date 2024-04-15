@@ -4,6 +4,14 @@
 Först så skapades en ny klass och layout-fil genom att skapa en ny "Empty Views Activity".
 Därefter lades en knapp till som ska kunna kopplas så att en ny activity startas när den klickas.
 
+I filen activity_main.xml skapas knappen `<Button />` med id `android:id="@+id/showHorseButton"`
+
+I MainActivity.java skapas eb binär knapp som sedan kopplas ihop med den knappen som skpades 
+i xml-filen. Det görs genom att ange det id som knappen har i xml-filen vilket är "showHorseButton"
+`Button horseButton = findViewById(R.id.showHorseButton);`
+
+För att göra så att knappen blir klickbar så implementeras en listener på knappen
+`horseButton.setOnClickListener(new View.OnClickListener() {});`
 Skapat en knapp som ska lkopplas till att starta en activity.
 
 ## Följande grundsyn gäller dugga-svar:
