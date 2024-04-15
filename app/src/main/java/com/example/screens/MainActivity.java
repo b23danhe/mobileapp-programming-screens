@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, HorseDisplay.class);
-                intent.putExtra("name", "Hästen");
+                intent.putExtra("name", "Hoppla Hoppla Skutt");
                 intent.putExtra("number",42);
                 startActivity(intent);
             }

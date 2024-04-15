@@ -18,11 +18,11 @@ public class HorseDisplay extends AppCompatActivity {
             String name = extras.getString("name");
             int number = extras.getInt("number");
 
-            TextView horseName=findViewById(R.id.horseName);
-            horseName.setText(name);
+            TextView nameOnHorse = findViewById(R.id.horseName);
+            nameOnHorse.setText(name);
 
-            TextView horseNumber=findViewById(R.id.horseNumber);
-            horseNumber.setText(""+number);
+            TextView numberOnHorse = findViewById(R.id.horseNumber);
+            numberOnHorse.setText(""+number);
         }
     }
 }
