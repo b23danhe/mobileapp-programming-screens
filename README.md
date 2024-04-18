@@ -10,34 +10,21 @@ I MainActivity.java skapas eb binär knapp som sedan kopplas ihop med den knappe
 i xml-filen. Det görs genom att ange det id som knappen har i xml-filen vilket är "showHorseButton"
 `Button horseButton = findViewById(R.id.showHorseButton);`
 
-För att göra så att knappen blir klickbar så implementeras en listener på knappen
+För att göra så att knappen blir klickbar så implementeras en listener på knappen genom följande kod:
 `horseButton.setOnClickListener(new View.OnClickListener() {});`
-Skapat en knapp som ska lkopplas till att starta en activity.
+Denna kodsträng säger att när knappen tryck så ska en ny instans av View skapas. Denna "View" är
+i sin tur en Intent som startar en ny activty/screen som i detta fallet är HorseDisplay.java. Den skickar
+även över data med `Intent.putExtra()` på följande sätt där `name` och `number`är variabler som blir
+tilldelat varsitt värde:
+`intent.putExtra("name", "Hoppla Hoppla Skutt");
+intent.putExtra("number",42);`
 
-## Följande grundsyn gäller dugga-svar:
-
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
-
-Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
-
-```
-function errorCallback(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            // Geolocation API stöds inte, gör något
-            break;
-        case error.POSITION_UNAVAILABLE:
-            // Misslyckat positionsanrop, gör något
-            break;
-        case error.UNKNOWN_ERROR:
-            // Okänt fel, gör något
-            break;
-    }
-}
-```
+I HorseDisplay.java skapas två widgets av typen TextView om så länge `getIntent().getExtras();` inte 
+returnerar ett NULL-värde. Respective TextView kopplas ihop med sitt id genom 
+`findViewById(R.id.horseName)` och `findViewById(R.id.horseNumber)` detta för att kunna sätta styling
+och vilken storlek respektive TextView ska ha. Det som pressenteras i dessa två TextView är
+det värde som variablarna `name` och `number`har blir tilldelade i MainActivity.java. Det görs genom
+att anropa variablarna med koden: `nameOnHorse.setText(name);` och `numberOnHorse.setText(""+number);`
+som sedan skriver ut i text det värde som variablerna har.
 
 <img src="screen1.png" alt="Screen1" style="width:300px;height:600px;"> <img src="screen2.png" alt="Screen2" style="width:300px;height:600px;">
